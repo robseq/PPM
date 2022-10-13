@@ -1,7 +1,7 @@
 # Broccolo fermo (salutare)
 
 extends KinematicBody2D
-
+ 
 onready var Anim = $AnimatedSprite
 onready var stats = $EnemiesStats
 onready var hit = Hitbox
