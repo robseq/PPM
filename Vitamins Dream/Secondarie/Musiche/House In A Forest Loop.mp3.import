@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/House In A Forest Loop.mp3-1039c1afac1682254dd3a3225e894fce.mp3str"
+
+[deps]
+
+source_file="res://Secondarie/Musiche/House In A Forest Loop.mp3"
+dest_files=[ "res://.import/House In A Forest Loop.mp3-1039c1afac1682254dd3a3225e894fce.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

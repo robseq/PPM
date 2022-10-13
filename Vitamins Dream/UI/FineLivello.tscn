@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/avanti.png" type="Texture" id=1]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/box2.png" type="Texture" id=2]
+[ext_resource path="res://Secondarie/Font/new_dynamicfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://UI/FineLivello.gd" type="Script" id=4]
+
+[sub_resource type="Gradient" id=13]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 0.266667 )
+
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 13 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 28, 30 )
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[node name="FineLivello" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 10 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 230.0
+margin_top = 81.0
+margin_right = 766.0
+margin_bottom = 460.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="LIvello" type="RichTextLabel" parent="."]
+margin_left = 290.0
+margin_top = 157.0
+margin_right = 534.0
+margin_bottom = 331.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 3 )
+text = "    Congratulazioni!
+Hai superato il livello raccogliendo la vitamina A ed hai ottenuto un punteggio di:
+Vediamo se sei pronto per affrontare il primo quiz!
+"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 509.0
+margin_top = 280.0
+margin_right = 553.0
+margin_bottom = 310.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+
+[node name="Ok2" type="Button" parent="."]
+margin_left = 932.0
+margin_top = 487.0
+margin_right = 989.0
+margin_bottom = 545.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+icon = ExtResource( 1 )
+flat = true
+expand_icon = true

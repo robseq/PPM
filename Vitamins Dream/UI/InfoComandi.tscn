@@ -1,0 +1,276 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Secondarie/Font/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Secondarie/Sprites/MenuComandi/frecce.png" type="Texture" id=2]
+[ext_resource path="res://Secondarie/Sprites/MenuComandi/space.png" type="Texture" id=3]
+[ext_resource path="res://Secondarie/Sprites/MenuComandi/wasd.png" type="Texture" id=4]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/NTHeoM2.png" type="Texture" id=5]
+[ext_resource path="res://Secondarie/Sprites/MenuComandi/f.png" type="Texture" id=6]
+[ext_resource path="res://Secondarie/Sprites/MenuComandi/l.png" type="Texture" id=7]
+[ext_resource path="res://Secondarie/Sprites/MenuComandi/invio.png" type="Texture" id=8]
+[ext_resource path="res://Secondarie/Sprites/MenuComandi/g.png" type="Texture" id=9]
+[ext_resource path="res://Secondarie/Sprites/MenuComandi/k.png" type="Texture" id=10]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/indietro.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFontData" id=183]
+font_path = "res://Secondarie/Font/m5x7.ttf"
+
+[sub_resource type="DynamicFont" id=184]
+font_data = SubResource( 183 )
+
+[sub_resource type="StyleBoxTexture" id=185]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="StyleBoxEmpty" id=186]
+
+[node name="InfoComandi" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Comandi2" type="RichTextLabel" parent="."]
+margin_left = 424.0
+margin_top = 40.0
+margin_right = 502.0
+margin_bottom = 80.0
+rect_scale = Vector2( 2.5, 2.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Comandi
+"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Movimento" type="RichTextLabel" parent="."]
+margin_left = 265.0
+margin_top = 113.0
+margin_right = 377.0
+margin_bottom = 153.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Movimento
+"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Combattimento" type="RichTextLabel" parent="."]
+margin_left = 445.0
+margin_top = 113.0
+margin_right = 538.0
+margin_bottom = 153.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Attacco
+"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Interazione" type="RichTextLabel" parent="."]
+margin_left = 767.0
+margin_top = 113.0
+margin_right = 870.0
+margin_bottom = 153.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Interazione"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Rotolare" type="RichTextLabel" parent="."]
+margin_left = 583.0
+margin_top = 113.0
+margin_right = 676.0
+margin_bottom = 153.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Rotolare"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sbarra" type="RichTextLabel" parent="."]
+margin_left = 772.5
+margin_top = 190.0
+margin_right = 805.5
+margin_bottom = 216.0
+rect_scale = Vector2( 4, 4 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 184 )
+text = "/"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sbarra2" type="RichTextLabel" parent="."]
+margin_left = 904.5
+margin_top = 189.0
+margin_right = 937.5
+margin_bottom = 215.0
+rect_scale = Vector2( 4, 4 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 184 )
+text = "/"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sbarra3" type="RichTextLabel" parent="."]
+margin_left = 772.5
+margin_top = 376.0
+margin_right = 805.5
+margin_bottom = 402.0
+rect_scale = Vector2( 4, 4 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 184 )
+text = "/"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sbarra4" type="RichTextLabel" parent="."]
+margin_left = 904.5
+margin_top = 375.0
+margin_right = 937.5
+margin_bottom = 401.0
+rect_scale = Vector2( 4, 4 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 184 )
+text = "/"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 331, 200 )
+scale = Vector2( 1.38043, 1.34167 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 331, 383 )
+scale = Vector2( 1.43478, 1.45 )
+texture = ExtResource( 4 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 822, 222 )
+scale = Vector2( 1.26136, 1.28571 )
+texture = ExtResource( 3 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 942, 222 )
+scale = Vector2( 1.58696, 1.35714 )
+texture = ExtResource( 8 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 487, 220 )
+scale = Vector2( 1.32143, 1.41071 )
+texture = ExtResource( 6 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 486, 404.625 )
+scale = Vector2( 1.42857, 1.52679 )
+texture = ExtResource( 10 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( 819, 407 )
+scale = Vector2( 1.26136, 1.28571 )
+texture = ExtResource( 3 )
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( 944, 408 )
+scale = Vector2( 1.58696, 1.35714 )
+texture = ExtResource( 8 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 627, 222 )
+scale = Vector2( 1.375, 1.42857 )
+texture = ExtResource( 9 )
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( 627, 406.75 )
+scale = Vector2( 1.35714, 1.375 )
+texture = ExtResource( 7 )
+
+[node name="Conf" type="RichTextLabel" parent="."]
+margin_left = 14.0
+margin_top = 368.0
+margin_right = 171.0
+margin_bottom = 408.0
+rect_scale = Vector2( 1.6, 1.6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Configurazione 2"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Conf2" type="RichTextLabel" parent="."]
+margin_left = 14.0
+margin_top = 200.0
+margin_right = 186.0
+margin_bottom = 244.0
+rect_scale = Vector2( 1.6, 1.6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Configurazione 1"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Barra" type="RichTextLabel" parent="."]
+margin_left = 884.0
+margin_top = 207.0
+margin_right = 987.0
+margin_bottom = 247.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "/"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Barra2" type="RichTextLabel" parent="."]
+margin_left = 884.0
+margin_top = 391.0
+margin_right = 987.0
+margin_bottom = 431.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "/"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Indietro" type="Button" parent="."]
+margin_left = 932.0
+margin_top = 511.0
+margin_right = 981.0
+margin_bottom = 549.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/hover = SubResource( 185 )
+custom_styles/focus = SubResource( 186 )
+icon = ExtResource( 11 )
+flat = true
+__meta__ = {
+"_editor_description_": ""
+}

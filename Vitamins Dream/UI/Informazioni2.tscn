@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/box2.png" type="Texture" id=1]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/avanti.png" type="Texture" id=2]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/vitamina A.jpg" type="Texture" id=3]
+[ext_resource path="res://Secondarie/Font/new_dynamicfont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://UI/Informazioni2.gd" type="Script" id=5]
+
+[sub_resource type="Gradient" id=13]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 0.266667 )
+
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 13 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 28, 30 )
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[node name="Informazioni2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="Testo" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="Testo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 984.0
+margin_bottom = 560.0
+texture = SubResource( 10 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="Testo"]
+margin_left = 271.0
+margin_top = 67.0
+margin_right = 774.0
+margin_bottom = 493.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Livello1" type="RichTextLabel" parent="Testo"]
+margin_left = 325.0
+margin_top = 121.0
+margin_right = 701.0
+margin_bottom = 458.0
+rect_scale = Vector2( 1.1, 1.1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "La vitamina A, detta anche retinolo, fa parte delle proteine liposolubili. E' importante assumerla costantemete poichè permette un buon funzionamenento della vista, il differenziamento dei tessuti, la divisione cellulare, la riproduzione, ed aumenta la resistenza alle infezioni. La carenza di questa vitamina può causare cecità crepuscolare, alterazione della cornea, infertilità. Essa si trova in molti cibi di origine animale come fegato e latte ma può essere sintetizzato partendo dal β carotene, un precursore di origine vegetale che si trova nelle carote, nelle verdure quali broccoli e spinaci, e tanti altri."
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Chiudi12" type="Button" parent="Testo"]
+margin_left = 932.0
+margin_top = 494.0
+margin_right = 991.0
+margin_bottom = 555.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Immagine" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="Immagine"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 984.0
+margin_bottom = 560.0
+texture = SubResource( 10 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="Immagine"]
+margin_left = 263.0
+margin_top = 70.0
+margin_right = 778.0
+margin_bottom = 517.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Sprite" type="Sprite" parent="Immagine"]
+position = Vector2( 520.5, 292.5 )
+scale = Vector2( 0.197227, 0.174866 )
+texture = ExtResource( 3 )
+
+[node name="Chiudi2" type="Button" parent="Immagine"]
+margin_left = 932.0
+margin_top = 494.0
+margin_right = 991.0
+margin_bottom = 555.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="Testo/Chiudi12" to="." method="_on_Chiudi12_pressed"]

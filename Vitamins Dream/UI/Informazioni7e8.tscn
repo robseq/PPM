@@ -1,0 +1,125 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/box2.png" type="Texture" id=1]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/avanti.png" type="Texture" id=2]
+[ext_resource path="res://UI/Informazioni7e8.gd" type="Script" id=3]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/vitamina B2.jpg" type="Texture" id=4]
+[ext_resource path="res://Secondarie/Font/new_dynamicfont.tres" type="DynamicFont" id=5]
+
+[sub_resource type="Gradient" id=13]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 0.266667 )
+
+[sub_resource type="GradientTexture" id=14]
+gradient = SubResource( 13 )
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 28, 30 )
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="Gradient" id=17]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 0.266667 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 17 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 28, 30 )
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[node name="Informazioni7e8" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Informazioni7" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="Informazioni7"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 984.0
+margin_bottom = 560.0
+texture = SubResource( 14 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="Informazioni7"]
+margin_left = 247.0
+margin_top = 72.0
+margin_right = 781.0
+margin_bottom = 509.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Livello1" type="RichTextLabel" parent="Informazioni7"]
+margin_left = 308.0
+margin_top = 134.0
+margin_right = 661.0
+margin_bottom = 487.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+text = "La vitamina B2, detta riboflavina, è una vitamina appartenente al gruppo delle vitamine B (idrosolubili). Questa vitamina si trova in carne, latte e derivati, lievito e altri alimenti. Essa riveste un ruolo importantissimo nel consentire la sintesi dei processi energetici assieme alla vitamina B1, oltre a mantenere un buon funzionamento del vistema nervoso, dei globuli rossi, e mantenere la pelle e gli occhi in salute. Al contrario, una carenza eccessiva può provocare stanchezza, anemia, tachicardia e altre condizioni sfavorevoli."
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Chiudi6" type="Button" parent="Informazioni7"]
+margin_left = 932.0
+margin_top = 494.0
+margin_right = 991.0
+margin_bottom = 555.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[node name="Informazioni8" type="Control" parent="."]
+visible = false
+margin_right = 1023.0
+margin_bottom = 597.0
+
+[node name="TextureRect2" type="TextureRect" parent="Informazioni8"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 6 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="Informazioni8"]
+margin_left = 250.0
+margin_top = 58.0
+margin_right = 786.0
+margin_bottom = 534.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Sprite" type="Sprite" parent="Informazioni8"]
+position = Vector2( 517, 296 )
+scale = Vector2( 0.207066, 0.184258 )
+texture = ExtResource( 4 )
+
+[node name="Chiudi7" type="Button" parent="Informazioni8"]
+margin_left = 932.0
+margin_top = 494.0
+margin_right = 991.0
+margin_bottom = 555.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="Informazioni7/Chiudi6" to="." method="_on_Chiudi6_pressed"]

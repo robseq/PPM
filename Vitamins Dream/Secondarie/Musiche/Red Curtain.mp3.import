@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Red Curtain.mp3-49d0459074efc5aeb260c1b6d7a9cceb.mp3str"
+
+[deps]
+
+source_file="res://Secondarie/Musiche/Red Curtain.mp3"
+dest_files=[ "res://.import/Red Curtain.mp3-49d0459074efc5aeb260c1b6d7a9cceb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

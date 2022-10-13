@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Vitamine/VitaminaB2Stats.tscn" type="PackedScene" id=1]
+
+[node name="VitaminaB2StatsIst" instance=ExtResource( 1 )]

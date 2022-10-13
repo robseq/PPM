@@ -1,0 +1,509 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/box2.png" type="Texture" id=1]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/avanti.png" type="Texture" id=2]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/risposte.png" type="Texture" id=3]
+[ext_resource path="res://Secondarie/Font/new_dynamicfont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://UI/Quiz3.gd" type="Script" id=5]
+
+[sub_resource type="Gradient" id=13]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 0.266667 )
+
+[sub_resource type="GradientTexture" id=14]
+gradient = SubResource( 13 )
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 28, 30 )
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxEmpty" id=18]
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="StyleBoxTexture" id=20]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
+[node name="Quiz3" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 14 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Intro" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Intro"]
+margin_left = 271.0
+margin_top = 162.0
+margin_right = 704.0
+margin_bottom = 411.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="LIvello" type="RichTextLabel" parent="Intro"]
+margin_left = 328.0
+margin_top = 218.0
+margin_right = 534.0
+margin_bottom = 392.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Rispondi ad una domanda su due e potrai proseguire al prossimo livello"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Prosegui" type="Button" parent="Intro"]
+margin_left = 932.0
+margin_top = 487.0
+margin_right = 989.0
+margin_bottom = 545.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[node name="Domanda1" type="Control" parent="."]
+visible = false
+margin_right = 1025.0
+margin_bottom = 598.0
+
+[node name="TextureRect" type="TextureRect" parent="Domanda1"]
+margin_left = 283.0
+margin_top = 56.0
+margin_right = 717.0
+margin_bottom = 219.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Domanda" type="RichTextLabel" parent="Domanda1"]
+margin_left = 328.0
+margin_top = 87.0
+margin_right = 542.0
+margin_bottom = 153.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Quali funzioni rivestono le vitamine B1 e B2?"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Risp1" type="RichTextLabel" parent="Domanda1"]
+light_mask = 0
+margin_left = 416.0
+margin_top = 277.0
+margin_right = 662.0
+margin_bottom = 295.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Funzioni energetiche"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Risp2" type="RichTextLabel" parent="Domanda1"]
+margin_left = 416.0
+margin_top = 381.0
+margin_right = 614.0
+margin_bottom = 440.0
+rect_scale = Vector2( 1.3, 1.3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Funzioni di crescita delle ossa"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Risp3" type="RichTextLabel" parent="Domanda1"]
+margin_left = 403.0
+margin_top = 487.0
+margin_right = 646.0
+margin_bottom = 517.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Funzioni antiossidanti"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CheckBox" type="CheckBox" parent="Domanda1"]
+margin_left = 292.0
+margin_top = 247.0
+margin_right = 316.0
+margin_bottom = 274.0
+rect_scale = Vector2( 3, 3 )
+custom_styles/focus = SubResource( 17 )
+flat = true
+expand_icon = true
+
+[node name="CheckBox2" type="CheckBox" parent="Domanda1"]
+margin_left = 292.0
+margin_top = 468.0
+margin_right = 316.0
+margin_bottom = 492.0
+rect_scale = Vector2( 3, 3 )
+custom_styles/focus = SubResource( 18 )
+flat = true
+expand_icon = true
+
+[node name="CheckBox3" type="CheckBox" parent="Domanda1"]
+margin_left = 292.0
+margin_top = 363.0
+margin_right = 316.0
+margin_bottom = 387.0
+rect_scale = Vector2( 3, 3 )
+custom_styles/focus = SubResource( 19 )
+flat = true
+expand_icon = true
+
+[node name="Sprite" type="Sprite" parent="Domanda1"]
+show_behind_parent = true
+position = Vector2( 544, 289 )
+scale = Vector2( 3.69767, 2.28846 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="Domanda1"]
+show_behind_parent = true
+position = Vector2( 545.5, 498 )
+scale = Vector2( 3.73256, 2.28846 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="Domanda1"]
+show_behind_parent = true
+position = Vector2( 547, 398 )
+scale = Vector2( 3.69767, 2.28846 )
+texture = ExtResource( 3 )
+
+[node name="Errato" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Errato"]
+margin_left = 271.0
+margin_top = 162.0
+margin_right = 704.0
+margin_bottom = 411.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="LIvello" type="RichTextLabel" parent="Errato"]
+margin_left = 311.0
+margin_top = 200.0
+margin_right = 527.0
+margin_bottom = 318.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Purtroppo non hai risposto correttamente. Però scommetto che ti rifarai con la prossima domanda!"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="VaiDomanda2" type="Button" parent="Errato"]
+margin_left = 921.0
+margin_top = 487.0
+margin_right = 989.0
+margin_bottom = 545.0
+custom_styles/hover = SubResource( 20 )
+custom_styles/focus = SubResource( 21 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[node name="PassaAllaDomanda2" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="TextureRect" type="TextureRect" parent="PassaAllaDomanda2"]
+margin_left = 271.0
+margin_top = 162.0
+margin_right = 704.0
+margin_bottom = 411.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="LIvello" type="RichTextLabel" parent="PassaAllaDomanda2"]
+margin_left = 328.0
+margin_top = 219.0
+margin_right = 534.0
+margin_bottom = 393.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Bene! Passiamo alla seconda e ultima domanda!"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Prosegui2" type="Button" parent="PassaAllaDomanda2"]
+margin_left = 932.0
+margin_top = 487.0
+margin_right = 989.0
+margin_bottom = 545.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[node name="Domanda2" type="Control" parent="."]
+visible = false
+margin_right = 1025.0
+margin_bottom = 598.0
+
+[node name="TextureRect" type="TextureRect" parent="Domanda2"]
+margin_left = 283.0
+margin_top = 56.0
+margin_right = 725.0
+margin_bottom = 219.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Domanda" type="RichTextLabel" parent="Domanda2"]
+margin_left = 332.0
+margin_top = 79.0
+margin_right = 565.0
+margin_bottom = 170.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Le vitamine B1 e B2, assieme alle altre vitamine del gruppo B sono:"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Risp1" type="RichTextLabel" parent="Domanda2"]
+light_mask = 0
+margin_left = 438.0
+margin_top = 277.0
+margin_right = 610.0
+margin_bottom = 312.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Liposolubili"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Risp2" type="RichTextLabel" parent="Domanda2"]
+margin_left = 438.0
+margin_top = 381.0
+margin_right = 641.0
+margin_bottom = 398.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Idrosolubili"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Risp3" type="RichTextLabel" parent="Domanda2"]
+margin_left = 438.0
+margin_top = 487.0
+margin_right = 629.0
+margin_bottom = 504.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Entrambe"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CheckBoxA" type="CheckBox" parent="Domanda2"]
+margin_left = 292.0
+margin_top = 247.0
+margin_right = 316.0
+margin_bottom = 276.0
+rect_scale = Vector2( 3, 3 )
+custom_styles/focus = SubResource( 22 )
+flat = true
+expand_icon = true
+
+[node name="CheckBoxB" type="CheckBox" parent="Domanda2"]
+margin_left = 292.0
+margin_top = 453.0
+margin_right = 316.0
+margin_bottom = 481.0
+rect_scale = Vector2( 3, 3 )
+custom_styles/focus = SubResource( 23 )
+flat = true
+expand_icon = true
+
+[node name="CheckBoxC" type="CheckBox" parent="Domanda2"]
+margin_left = 292.0
+margin_top = 363.0
+margin_right = 316.0
+margin_bottom = 387.0
+rect_scale = Vector2( 3, 3 )
+custom_styles/focus = SubResource( 24 )
+flat = true
+expand_icon = true
+
+[node name="Sprite" type="Sprite" parent="Domanda2"]
+show_behind_parent = true
+position = Vector2( 551, 289 )
+scale = Vector2( 3.86047, 2.28846 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="Domanda2"]
+show_behind_parent = true
+position = Vector2( 551, 498 )
+scale = Vector2( 3.86047, 2.28846 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="Domanda2"]
+show_behind_parent = true
+position = Vector2( 552.5, 398 )
+scale = Vector2( 3.82558, 2.28846 )
+texture = ExtResource( 3 )
+
+[node name="Errato2" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="TextureRect" type="TextureRect" parent="Errato2"]
+margin_left = 271.0
+margin_top = 162.0
+margin_right = 704.0
+margin_bottom = 411.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="LIvello" type="RichTextLabel" parent="Errato2"]
+margin_left = 311.0
+margin_top = 219.0
+margin_right = 527.0
+margin_bottom = 337.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Purtroppo hai sbagliato anche questa domanda. Ma puoi imparare ancora tanto sulle vitamine!"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Prosegui3" type="Button" parent="Errato2"]
+margin_left = 932.0
+margin_top = 487.0
+margin_right = 989.0
+margin_bottom = 545.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[node name="UnaSuDue" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="UnaSuDue"]
+margin_left = 271.0
+margin_top = 162.0
+margin_right = 713.0
+margin_bottom = 428.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="LIvello" type="RichTextLabel" parent="UnaSuDue"]
+margin_left = 332.0
+margin_top = 231.0
+margin_right = 532.0
+margin_bottom = 349.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Hai risposto ad una domanda su due, ma la prossima volta potrai fare di meglio! "
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Prosegui5" type="Button" parent="UnaSuDue"]
+margin_left = 932.0
+margin_top = 487.0
+margin_right = 989.0
+margin_bottom = 545.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[node name="QuizCorretto" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="QuizCorretto"]
+margin_left = 271.0
+margin_top = 162.0
+margin_right = 704.0
+margin_bottom = 411.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="LIvello" type="RichTextLabel" parent="QuizCorretto"]
+margin_left = 328.0
+margin_top = 219.0
+margin_right = 549.0
+margin_bottom = 339.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Complimenti! Sei preparato davvero preparato sulle vitamine! "
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Prosegui4" type="Button" parent="QuizCorretto"]
+margin_left = 932.0
+margin_top = 487.0
+margin_right = 989.0
+margin_bottom = 545.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="Intro/Prosegui" to="." method="_on_Prosegui_pressed"]
+[connection signal="pressed" from="Domanda1/CheckBox" to="." method="_on_CheckBox_pressed"]
+[connection signal="pressed" from="Domanda1/CheckBox2" to="." method="_on_CheckBox2_pressed"]
+[connection signal="pressed" from="Domanda1/CheckBox3" to="." method="_on_CheckBox3_pressed"]
+[connection signal="pressed" from="Errato/VaiDomanda2" to="." method="_on_VaiDomanda2_pressed"]
+[connection signal="pressed" from="PassaAllaDomanda2/Prosegui2" to="." method="_on_Prosegui2_pressed"]
+[connection signal="pressed" from="Domanda2/CheckBoxA" to="." method="_on_CheckBoxA_pressed"]
+[connection signal="pressed" from="Domanda2/CheckBoxB" to="." method="_on_CheckBoxB_pressed"]
+[connection signal="pressed" from="Domanda2/CheckBoxC" to="." method="_on_CheckBoxC_pressed"]

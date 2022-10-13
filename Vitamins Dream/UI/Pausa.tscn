@@ -1,0 +1,286 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/esci.png" type="Texture" id=1]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/riprendi.png" type="Texture" id=2]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/opzioni.png" type="Texture" id=3]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/NTHeoM.png" type="Texture" id=4]
+[ext_resource path="res://UI/Pausa.gd" type="Script" id=5]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/messaggioConferma.png" type="Texture" id=6]
+[ext_resource path="res://Secondarie/Font/new_dynamicfont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/si.png" type="Texture" id=8]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/no.png" type="Texture" id=9]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/indietro.png" type="Texture" id=10]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/checkButton.png" type="Texture" id=22]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/checkButtonunchecked.png" type="Texture" id=23]
+[ext_resource path="res://UI/Opzioni.gd" type="Script" id=24]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/NTHeoM2.png" type="Texture" id=25]
+
+[sub_resource type="StreamTexture" id=17]
+flags = 4
+
+[sub_resource type="StyleBoxTexture" id=108]
+texture = SubResource( 17 )
+region_rect = Rect2( 0, 0, 60, 26 )
+
+[sub_resource type="StyleBoxEmpty" id=109]
+
+[sub_resource type="StreamTexture" id=18]
+flags = 4
+
+[sub_resource type="StyleBoxTexture" id=110]
+texture = SubResource( 18 )
+region_rect = Rect2( 0, 0, 60, 26 )
+
+[sub_resource type="StyleBoxEmpty" id=111]
+
+[sub_resource type="StyleBoxEmpty" id=126]
+
+[sub_resource type="StyleBoxEmpty" id=120]
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxTexture" id=122]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="StyleBoxEmpty" id=123]
+
+[sub_resource type="StyleBoxTexture" id=124]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="StyleBoxEmpty" id=125]
+
+[node name="Pausa" type="Control"]
+pause_mode = 2
+script = ExtResource( 5 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Riprendi" type="Button" parent="."]
+margin_left = 457.0
+margin_top = 305.0
+margin_right = 534.0
+margin_bottom = 347.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_styles/hover = SubResource( 108 )
+custom_styles/focus = SubResource( 109 )
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Opzioni" type="Button" parent="."]
+margin_left = 458.0
+margin_top = 371.0
+margin_right = 546.0
+margin_bottom = 410.0
+rect_scale = Vector2( 1.6, 1.7 )
+custom_styles/hover = SubResource( 108 )
+custom_styles/focus = SubResource( 109 )
+icon = ExtResource( 3 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Esci" type="Button" parent="."]
+margin_left = 457.0
+margin_top = 432.0
+margin_right = 537.0
+margin_bottom = 473.0
+rect_scale = Vector2( 1.7, 1.8 )
+custom_styles/hover = SubResource( 110 )
+custom_styles/focus = SubResource( 111 )
+icon = ExtResource( 1 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Options" type="Control" parent="CanvasLayer3"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 24 )
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer3/Options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 984.0
+margin_bottom = 560.0
+texture = ExtResource( 25 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer3/Options"]
+margin_left = 424.0
+margin_top = 111.0
+margin_right = 502.0
+margin_bottom = 151.0
+rect_scale = Vector2( 2.5, 2.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+text = "Opzioni"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer3/Options"]
+margin_left = 457.0
+margin_top = 160.0
+margin_right = 910.0
+margin_bottom = 335.0
+rect_scale = Vector2( 2.2, 2.2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+text = "Video
+"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer3/Options"]
+margin_left = 323.0
+margin_top = 207.0
+margin_right = 516.0
+margin_bottom = 338.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+text = "Fullscreen"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="CanvasLayer3/Options"]
+margin_left = 458.0
+margin_top = 266.0
+margin_right = 911.0
+margin_bottom = 441.0
+rect_scale = Vector2( 2.2, 2.2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+text = "Audio"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="CanvasLayer3/Options"]
+margin_left = 323.0
+margin_top = 305.0
+margin_right = 516.0
+margin_bottom = 436.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+text = "Volume"
+
+[node name="CheckButton" type="CheckButton" parent="CanvasLayer3/Options"]
+margin_left = 593.0
+margin_top = 200.0
+margin_right = 653.0
+margin_bottom = 240.0
+rect_scale = Vector2( 1.1, 1 )
+custom_icons/off = ExtResource( 23 )
+custom_icons/on = ExtResource( 22 )
+custom_styles/focus = SubResource( 126 )
+flat = true
+
+[node name="CheckButton3" type="CheckButton" parent="CanvasLayer3/Options"]
+margin_left = 593.0
+margin_top = 296.0
+margin_right = 653.0
+margin_bottom = 336.0
+rect_scale = Vector2( 1.1, 1 )
+custom_icons/off = ExtResource( 23 )
+custom_icons/on = ExtResource( 22 )
+custom_styles/focus = SubResource( 120 )
+pressed = true
+flat = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button2" type="Button" parent="CanvasLayer3/Options"]
+margin_left = 932.0
+margin_top = 511.0
+margin_right = 981.0
+margin_bottom = 549.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+icon = ExtResource( 10 )
+flat = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Conferma" type="Control" parent="CanvasLayer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Conferma"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 984.0
+margin_bottom = 560.0
+texture = ExtResource( 25 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Conferma"]
+margin_left = 431.0
+margin_top = 273.0
+margin_right = 621.0
+margin_bottom = 428.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Si" type="Button" parent="CanvasLayer/Conferma"]
+margin_left = 436.0
+margin_top = 432.0
+margin_right = 497.0
+margin_bottom = 489.0
+custom_styles/hover = SubResource( 122 )
+custom_styles/focus = SubResource( 123 )
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+
+[node name="No" type="Button" parent="CanvasLayer/Conferma"]
+margin_left = 561.0
+margin_top = 432.0
+margin_right = 621.0
+margin_bottom = 489.0
+custom_styles/hover = SubResource( 124 )
+custom_styles/focus = SubResource( 125 )
+icon = ExtResource( 9 )
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="Riprendi" to="." method="_on_Riprendi_pressed"]
+[connection signal="pressed" from="Opzioni" to="." method="_on_Opzioni_pressed"]
+[connection signal="pressed" from="Esci" to="." method="_on_Esci_pressed"]
+[connection signal="toggled" from="CanvasLayer3/Options/CheckButton" to="CanvasLayer3/Options" method="_on_CheckButton_toggled"]
+[connection signal="toggled" from="CanvasLayer3/Options/CheckButton3" to="CanvasLayer3/Options" method="_on_CheckButton3_toggled"]
+[connection signal="pressed" from="CanvasLayer3/Options/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Conferma/Si" to="." method="_on_Si_pressed"]
+[connection signal="pressed" from="CanvasLayer/Conferma/No" to="." method="_on_No_pressed"]

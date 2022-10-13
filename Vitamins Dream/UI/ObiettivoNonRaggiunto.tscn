@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/box2.png" type="Texture" id=1]
+[ext_resource path="res://Secondarie/Font/new_dynamicfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/indietro.png" type="Texture" id=4]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/reset.png" type="Texture" id=5]
+
+[sub_resource type="Gradient" id=9]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 0.266667 )
+
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 9 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 28, 30 )
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 28, 30 )
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[node name="ObiettivoNonRaggiunto" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 10 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 297.0
+margin_top = 121.0
+margin_right = 707.0
+margin_bottom = 422.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Livello1" type="RichTextLabel" parent="."]
+margin_left = 341.0
+margin_top = 183.0
+margin_right = 589.0
+margin_bottom = 425.0
+rect_scale = Vector2( 1.4, 1.4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Non hai ancora raggiunto il tuo obbiettivo. Vuoi continuare o resettare il livello?"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 404.0
+margin_top = 307.0
+margin_right = 458.0
+margin_bottom = 363.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/focus = SubResource( 14 )
+icon = ExtResource( 4 )
+flat = true
+expand_icon = true
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 522.0
+margin_top = 312.0
+margin_right = 576.0
+margin_bottom = 365.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+icon = ExtResource( 5 )
+flat = true
+expand_icon = true

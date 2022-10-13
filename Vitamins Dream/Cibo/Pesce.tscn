@@ -1,0 +1,89 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Secondarie/Sprites/Personaggi/Pesce.png" type="Texture" id=1]
+[ext_resource path="res://Statistiche/EnemiesStats.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Statistiche/Hurtbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cibo/Pesce.gd" type="Script" id=4]
+
+[sub_resource type="CapsuleShape2D" id=9]
+radius = 1.0
+height = 0.0
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": false,
+"name": "Death",
+"speed": 8.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=10]
+radius = 19.0
+height = 16.0
+
+[node name="Pesce" type="KinematicBody2D"]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 3.5 )
+shape = SubResource( 9 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 8 )
+animation = "Idle"
+frame = 2
+playing = true
+
+[node name="Hurtbox" parent="." instance=ExtResource( 3 )]
+collision_layer = 2
+collision_mask = 2
+
+[node name="HurtboxShape" parent="Hurtbox" index="0"]
+position = Vector2( -1, 2 )
+shape = SubResource( 10 )
+
+[node name="EnemiesStats" parent="." instance=ExtResource( 2 )]
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_Hurtbox_body_entered"]
+
+[editable path="Hurtbox"]

@@ -1,0 +1,433 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://UI/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/NTHeoM.png" type="Texture" id=2]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/esci.png" type="Texture" id=3]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/opzioni.png" type="Texture" id=4]
+[ext_resource path="res://Secondarie/Font/Daydream.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/crediti.png" type="Texture" id=6]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/gioca.png" type="Texture" id=7]
+[ext_resource path="res://Secondarie/Font/new_dynamicfont.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/messaggioConferma.png" type="Texture" id=9]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/si.png" type="Texture" id=10]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/checkButton.png" type="Texture" id=11]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/checkButtonunchecked.png" type="Texture" id=12]
+[ext_resource path="res://UI/Options.gd" type="Script" id=13]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/indietro.png" type="Texture" id=14]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/no.png" type="Texture" id=15]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/NTHeoM2.png" type="Texture" id=18]
+
+[sub_resource type="DynamicFont" id=4]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StreamTexture" id=35]
+flags = 4
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = SubResource( 35 )
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 60, 28 )
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StreamTexture" id=36]
+flags = 4
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = SubResource( 36 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StreamTexture" id=37]
+flags = 4
+
+[sub_resource type="StyleBoxTexture" id=14]
+texture = SubResource( 37 )
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Secondarie/Font/Perfect DOS VGA 437 Win.ttf"
+
+[sub_resource type="DynamicFont" id=34]
+font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=43]
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxTexture" id=23]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
+[sub_resource type="GDScript" id=38]
+script/source = "extends Control
+
+func _process(delta):
+	if Input.is_action_just_pressed(\"ui_cancel\"):
+		get_tree().change_scene(\"res://UI/Menu.tscn\")
+"
+
+[sub_resource type="StyleBoxTexture" id=25]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="StyleBoxEmpty" id=26]
+
+[sub_resource type="StyleBoxTexture" id=39]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="StyleBoxEmpty" id=40]
+
+[sub_resource type="StyleBoxTexture" id=41]
+texture = ExtResource( 15 )
+region_rect = Rect2( 0, 0, 28, 28 )
+
+[sub_resource type="StyleBoxEmpty" id=42]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 210.0
+margin_top = 135.0
+margin_right = 370.0
+margin_bottom = 159.0
+rect_scale = Vector2( 2.5, 2.5 )
+custom_colors/default_color = Color( 0.776471, 0.141176, 0.141176, 1 )
+custom_colors/font_color_shadow = Color( 0.294118, 0.0117647, 0.0117647, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+meta_underlined = false
+text = "VITAMINS"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+margin_left = 578.0
+margin_top = 135.0
+margin_right = 714.0
+margin_bottom = 198.0
+rect_scale = Vector2( 2.5, 2.5 )
+custom_colors/default_color = Color( 0.776471, 0.141176, 0.141176, 1 )
+custom_colors/font_color_shadow = Color( 0.294118, 0.0117647, 0.0117647, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+text = "DREAM"
+
+[node name="Gioca" type="Button" parent="."]
+margin_left = 458.0
+margin_top = 266.0
+margin_right = 540.0
+margin_bottom = 301.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 8 )
+icon = ExtResource( 7 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Credits" type="Button" parent="."]
+margin_left = 458.0
+margin_top = 391.0
+margin_right = 541.0
+margin_bottom = 426.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/focus = SubResource( 9 )
+icon = ExtResource( 6 )
+flat = true
+expand_icon = true
+
+[node name="Opzioni" type="Button" parent="."]
+margin_left = 458.0
+margin_top = 329.0
+margin_right = 541.0
+margin_bottom = 364.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/focus = SubResource( 7 )
+icon = ExtResource( 4 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Esci" type="Button" parent="."]
+margin_left = 457.0
+margin_top = 451.0
+margin_right = 534.0
+margin_bottom = 488.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_styles/hover = SubResource( 14 )
+custom_styles/focus = SubResource( 10 )
+icon = ExtResource( 3 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Options" type="Control" parent="CanvasLayer3"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 13 )
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer3/Options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 984.0
+margin_bottom = 560.0
+texture = ExtResource( 18 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer3/Options"]
+margin_left = 423.0
+margin_top = 102.0
+margin_right = 569.0
+margin_bottom = 143.0
+rect_scale = Vector2( 2.5, 2.5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 8 )
+text = "Opzioni"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer3/Options"]
+margin_left = 445.0
+margin_top = 153.0
+margin_right = 898.0
+margin_bottom = 328.0
+rect_scale = Vector2( 2.2, 2.2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 34 )
+text = "Video
+"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer3/Options"]
+margin_left = 299.0
+margin_top = 214.0
+margin_right = 492.0
+margin_bottom = 345.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 34 )
+text = "Fullscreen"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="CanvasLayer3/Options"]
+margin_left = 445.0
+margin_top = 266.0
+margin_right = 898.0
+margin_bottom = 441.0
+rect_scale = Vector2( 2.2, 2.2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 34 )
+text = "Audio"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="CanvasLayer3/Options"]
+margin_left = 299.0
+margin_top = 314.0
+margin_right = 492.0
+margin_bottom = 445.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 34 )
+text = "Volume"
+
+[node name="CheckButton" type="CheckButton" parent="CanvasLayer3/Options"]
+margin_left = 596.0
+margin_top = 205.0
+margin_right = 656.0
+margin_bottom = 245.0
+rect_scale = Vector2( 1.1, 1 )
+custom_icons/off = ExtResource( 12 )
+custom_icons/on = ExtResource( 11 )
+custom_styles/focus = SubResource( 43 )
+flat = true
+
+[node name="CheckButton2" type="CheckButton" parent="CanvasLayer3/Options"]
+margin_left = 596.0
+margin_top = 306.0
+margin_right = 656.0
+margin_bottom = 346.0
+rect_scale = Vector2( 1.1, 1 )
+custom_icons/off = ExtResource( 12 )
+custom_icons/on = ExtResource( 11 )
+custom_styles/focus = SubResource( 22 )
+pressed = true
+flat = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button2" type="Button" parent="CanvasLayer3/Options"]
+margin_left = 932.0
+margin_top = 511.0
+margin_right = 981.0
+margin_bottom = 549.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/hover = SubResource( 23 )
+custom_styles/focus = SubResource( 24 )
+icon = ExtResource( 14 )
+flat = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="."]
+
+[node name="Credits" type="Control" parent="CanvasLayer4"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = SubResource( 38 )
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer4/Credits"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 984.0
+margin_bottom = 560.0
+texture = ExtResource( 18 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer4/Credits"]
+margin_left = 442.0
+margin_top = 8.0
+margin_right = 571.0
+margin_bottom = 43.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 8 )
+text = "Credits"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer4/Credits"]
+margin_left = 34.0
+margin_top = 41.0
+margin_right = 812.0
+margin_bottom = 551.0
+rect_scale = Vector2( 1.3, 1.3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 8 )
+text = "                                     Video
+       'Mystic Woods - 16x16 Pixel Art Asset Pack' di Game Endevour su itch.io
+             'Pixel Art Adventurer Sprites' di Elthen su GameDev Market
+           'Video Games Pixel Art Wallpaper Pixel Art' su pinterest.com
+				'Pixel art GUI elements' di Mounir Tohami su itch.io
+
+                                     Audio
+		      'House in a forest' di HorroPen su opengameart.org
+			    'Red Curtain' di HorrorPen su opengameart.com		
+				
+								      Font
+                     'Daydream' di DoubleGum su dafont.com
+               'Perfect DOS VGA 437' di Zeh Fernando su dafont.com			
+								
+						         Fonti testuali
+\"Vitamine: Cosa Sono, Funzioni e Classificazione\" di Redazione Mypersonaltrainer 
+                           su myperonaltrainer.com
+\"Vitamina A\", \"Vitamina B1\", \"Vitamina B2\" di Riccardo Borgacci su  
+                            mypersonaltrainer.com
+   \"Vitamina B12\" di Redazione Mypersonatrainer su mypersonaltrainer.com
+								
+								     Tool
+                 'Dialogic' di Emilio Coppola (Godot Plugin)
+				    'pixeldudesmaker' di 0x72 su itch.io"
+
+[node name="Button" type="Button" parent="CanvasLayer4/Credits"]
+margin_left = 906.0
+margin_top = 500.0
+margin_right = 946.0
+margin_bottom = 536.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/hover = SubResource( 25 )
+custom_styles/focus = SubResource( 26 )
+icon = ExtResource( 14 )
+flat = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Conferma" type="Control" parent="CanvasLayer"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Conferma"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 984.0
+margin_bottom = 560.0
+texture = ExtResource( 18 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Conferma"]
+margin_left = 431.0
+margin_top = 273.0
+margin_right = 621.0
+margin_bottom = 428.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Si" type="Button" parent="CanvasLayer/Conferma"]
+margin_left = 436.0
+margin_top = 432.0
+margin_right = 497.0
+margin_bottom = 489.0
+custom_styles/hover = SubResource( 39 )
+custom_styles/focus = SubResource( 40 )
+icon = ExtResource( 10 )
+flat = true
+expand_icon = true
+
+[node name="No" type="Button" parent="CanvasLayer/Conferma"]
+margin_left = 561.0
+margin_top = 432.0
+margin_right = 621.0
+margin_bottom = 489.0
+custom_styles/hover = SubResource( 41 )
+custom_styles/focus = SubResource( 42 )
+icon = ExtResource( 15 )
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="Gioca" to="." method="_on_Gioca_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="Opzioni" to="." method="_on_Opzioni_pressed"]
+[connection signal="pressed" from="Esci" to="." method="_on_Esci_pressed"]
+[connection signal="toggled" from="CanvasLayer3/Options/CheckButton" to="CanvasLayer3/Options" method="_on_CheckButton_toggled"]
+[connection signal="toggled" from="CanvasLayer3/Options/CheckButton2" to="CanvasLayer3/Options" method="_on_CheckButton2_toggled"]
+[connection signal="pressed" from="CanvasLayer3/Options/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CanvasLayer4/Credits/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Conferma/Si" to="." method="_on_Si_pressed"]
+[connection signal="pressed" from="CanvasLayer/Conferma/No" to="." method="_on_No_pressed"]

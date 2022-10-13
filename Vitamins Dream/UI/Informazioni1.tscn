@@ -1,0 +1,123 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/avanti.png" type="Texture" id=1]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/box2.png" type="Texture" id=2]
+[ext_resource path="res://Secondarie/Font/new_dynamicfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://UI/Informazioni1.gd" type="Script" id=4]
+
+[sub_resource type="Gradient" id=13]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 0.266667 )
+
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 13 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 28, 30 )
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[node name="Informazioni1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="Inf1" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="Inf1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 984.0
+margin_bottom = 560.0
+texture = SubResource( 10 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="Inf1"]
+margin_left = 263.0
+margin_top = 85.0
+margin_right = 756.0
+margin_bottom = 516.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Informaz" type="RichTextLabel" parent="Inf1"]
+margin_left = 327.0
+margin_top = 145.0
+margin_right = 659.0
+margin_bottom = 423.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Il termine \"Vitamina\" fu coniato dallo scienziato polacco Casimir Funk nel 1912, ed indica un composto organico appartenente al gruppo dei micronutrienti, essenziale per le funzioni principali dell'organismo. Anche piccole quantità di questi composti servono a soddisfare le richieste biologiche dell'organismo. Tuttavia, sebbene alcune siano prodotte autonomamente dal corpo umano, la maggior parte dev'essere necessariamente introdotta attraverso l'alimentazione."
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Chiudi" type="Button" parent="Inf1"]
+margin_left = 932.0
+margin_top = 494.0
+margin_right = 991.0
+margin_bottom = 555.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+icon = ExtResource( 1 )
+flat = true
+expand_icon = true
+
+[node name="Inf2" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Inf2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 10 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="Inf2"]
+margin_left = 263.0
+margin_top = 84.0
+margin_right = 757.0
+margin_bottom = 516.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Informaz" type="RichTextLabel" parent="Inf2"]
+margin_left = 311.0
+margin_top = 153.0
+margin_right = 669.0
+margin_bottom = 464.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Le vitamine si differenziano fra loro per struttura chimica, funzioni svolte, e proprietà. Comunque, vista l'eterogeneità di struttura e funzioni, le vitamine vengono classificate in due macrogruppi: vitamine idrosolubili e liposolubili. Le prime sono solubili in acqua e devono essere assunte regolarmente. Tra esse ci sono la vitamina C e le vitamine del gruppo B. Le seconde invece sono traspostrtate all'interno del corpo mediante i grassi e tra esse ci sono la vitamina A, D, E e K.  "
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Chiudi11" type="Button" parent="Inf2"]
+margin_left = 932.0
+margin_top = 494.0
+margin_right = 991.0
+margin_bottom = 555.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+icon = ExtResource( 1 )
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="Inf1/Chiudi" to="." method="_on_Chiudi_pressed"]

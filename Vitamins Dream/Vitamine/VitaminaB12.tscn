@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Vitamine/VitaminaB12.gd" type="Script" id=1]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/barVuoto1.png" type="Texture" id=2]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/bar33.png" type="Texture" id=3]
+[ext_resource path="res://Secondarie/Sprites/Interfaccia/vitaminaB12.png" type="Texture" id=4]
+
+[node name="VitaminaB12" type="Control"]
+script = ExtResource( 1 )
+
+[node name="pillEmpty" type="TextureRect" parent="."]
+margin_right = 315.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+stretch_mode = 2
+
+[node name="pillFull" type="TextureRect" parent="."]
+margin_bottom = 40.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 2
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -13, 8 )
+scale = Vector2( 0.658, 0.696 )
+texture = ExtResource( 4 )
